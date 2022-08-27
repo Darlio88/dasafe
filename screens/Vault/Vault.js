@@ -5,6 +5,8 @@ import {colors} from '../../assets/colors'
 import { Feather } from '@expo/vector-icons'
 import TextLogo from '../../components/TextLogo'
 import PasswordCard from '../../components/PasswordCard'
+import {accounts} from '../../assets/data/accounts'
+
 
 const Vault = ({navigation}) => {
   return (
@@ -22,16 +24,10 @@ const Vault = ({navigation}) => {
     </View>
     <View style={{flex:5}}>
       <ScrollView>
-   <PasswordCard />
-   <PasswordCard />
-   <PasswordCard />
-   <PasswordCard />
-   <PasswordCard />
-   <PasswordCard />
-   <PasswordCard />
-   <PasswordCard />
-   <PasswordCard />
-   <PasswordCard />
+        {
+          accounts.map((account, index)=>(  <PasswordCard key={index} {...account} />))
+        }
+ 
    </ScrollView>
    </View>
    <TouchableOpacity 

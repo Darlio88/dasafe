@@ -3,7 +3,7 @@ import React from 'react'
 import { Feather } from '@expo/vector-icons'
 import { colors } from '../assets/colors'
 
-const PasswordCard = () => {
+const PasswordCard = ({account,username,password,imageUrl}) => {
   return (
     <View style={{
       flexDirection:'row',

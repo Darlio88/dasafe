@@ -1,0 +1,32 @@
+export const accounts =[
+    {account:"facebook",
+     username:"Akello01",
+      password:"mhg#43Ab",
+      imageUrl:"https://ik.imagekit.io/x761p7oyp/dasafe-assets/facebook.png"
+    },
+    {account:"discord",
+    username:"@Badninja",
+     password:"mhg#43Ab",
+     imageUrl:"https://ik.imagekit.io/x761p7oyp/dasafe-assets/discord.png"
+   },
+   {account:"slack",
+   username:"Akellobmw",
+    password:"mhg#43Ab",
+    imageUrl:"https://ik.imagekit.io/x761p7oyp/dasafe-assets/slack.png"
+  },
+  {account:"instagram",
+  username:"Akelllo9",
+   password:"mhg#43Ab",
+   imageUrl:"https://ik.imagekit.io/x761p7oyp/dasafe-assets/instagram.png"
+ },
+ {account:"spotify",
+ username:"Mercy003",
+  password:"mhg#43Ab",
+  imageUrl:"https://ik.imagekit.io/x761p7oyp/dasafe-assets/spotify.png"
+},
+{account:"sketch",
+username:"MercyBT",
+ password:"mhg#43Ab",
+ imageUrl:"https://ik.imagekit.io/x761p7oyp/dasafe-assets/sketch.png"
+}
+]
