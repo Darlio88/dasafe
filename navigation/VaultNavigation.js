@@ -9,8 +9,13 @@ const Stack = createNativeStackNavigator()
 const VaultNavigation = () => {
   return (
     <Stack.Navigator initialRouteName='vault'>
-        <Stack.Screen name='vault' component={Vault} />
-        <Stack.Screen name='create-vault' component={CreateVault} />
+        <Stack.Screen 
+        options={
+          {headerShown:false,}
+        }
+        name='vault' component={Vault} />
+        <Stack.Screen name='create-vault' 
+        component={CreateVault} />
     </Stack.Navigator>
   )
 }
