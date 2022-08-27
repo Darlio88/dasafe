@@ -1,32 +1,44 @@
-import { StyleSheet, TextInput, View, KeyboardAvoidingView} from 'react-native'
+import { StyleSheet, View,Text} from 'react-native'
 import React from 'react'
-import { Feather } from '@expo/vector-icons';
-import {colors} from '../../assets/colors'
+import { Feather } from '@expo/vector-icons'
+import { MaterialIcons } from '@expo/vector-icons';
+import CustomInputDetails from '../../components/CustomInputDetails'
+import CustomButton from '../../components/CustomButton'
+import { colors } from '../../assets/colors';
+
 
 const CreateVault = () => {
   return (
-      <KeyboardAvoidingView 
-      style={{flexDirection:'row', 
-      marginVertical:4,
-      paddingHorizontal:8,
-      paddingVertical:8,
-      alignItems:'center',
-      backgroundColor:colors.white,
-      borderRadius:12,
-      borderBottomWidth:1,
-      borderColor:colors.secondary,
-       width:'100%'}}>
-      <Feather name={iconName} size={24} color={colors.secondary} />
-        <TextInput
-         placeholder={placeholder}
-         placeholderTextColor={colors.secondary}
-         secureTextEntry={secure}
-         style={{marginLeft:8,
-          width:'100%', 
-          height:'100%',
-          color:colors.dark
-          }}/>
-      </KeyboardAvoidingView>
+   <View style={{flex:1, marginTop:16}}>
+   <View style={{flex:2, margin:8}}>
+   <Text style={{alignSelf:'center',paddingBottom:8,color:colors.black,fontSize:20,fontWeight:'bold'}}>Enter your account details</Text>
+<View style={{marginVertical:4}}>
+<CustomInputDetails placeholder='Enter Username' iconName='user' />
+</View>
+<View style={{marginVertical:4}}>
+<CustomInputDetails placeholder='Enter Password' iconName='lock' secure={true}/>
+</View>
+<View style={{marginVertical:4}}>
+<CustomInputDetails placeholder='Enter Website' iconName='at-sign' />
+</View>
+    
+    <CustomButton title='SUBMIT' color={colors.secondary} />
+   </View>
+    <View style={{flex:1, margin:8,}}>
+      <View style={{flexDirection:'row', alignItems:'center', marginVertical:6}}>
+      <Feather name="star" size={24} color={colors.black} />
+      <Text style={{marginLeft:6, color:colors.black}}>Add to favorites</Text>
+      </View>
+      <View style={{flexDirection:'row',alignItems:'center', marginVertical:6}}>
+      <Feather name="copy" size={24} color={colors.black} />
+      <Text style={{marginLeft:6, color:colors.black}}>Copy</Text>
+      </View>
+      <View style={{flexDirection:'row',alignItems:'center', marginVertical:6}}>
+      <MaterialIcons name="delete-outline" size={24} color={colors.red} />
+      <Text style={{marginLeft:6, color:colors.red}}>Delete</Text>
+      </View>
+    </View>
+   </View>
     
   )
 }
