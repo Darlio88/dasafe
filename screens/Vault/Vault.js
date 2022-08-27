@@ -6,7 +6,7 @@ import { Feather } from '@expo/vector-icons'
 import TextLogo from '../../components/TextLogo'
 import PasswordCard from '../../components/PasswordCard'
 
-const Vault = () => {
+const Vault = ({navigation}) => {
   return (
     <View style={{paddingTop:32, flex:1}}>
     <View  style={{flex:1, 
@@ -20,7 +20,8 @@ const Vault = () => {
          placeholder='Search Passwords here..' />
       </View>
     </View>
-    <ScrollView style={{flex:2}}>
+    <View style={{flex:5}}>
+      <ScrollView>
    <PasswordCard />
    <PasswordCard />
    <PasswordCard />
@@ -32,10 +33,12 @@ const Vault = () => {
    <PasswordCard />
    <PasswordCard />
    </ScrollView>
+   </View>
    <TouchableOpacity 
+   onPress={()=>navigation.navigate('create-vault')}
    style={{position:'absolute',
    padding:8,
-   top: 70,
+   top: 400,
    right: 10,
     backgroundColor:colors.secondary,
     borderRadius:23,
