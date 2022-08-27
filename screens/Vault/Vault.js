@@ -22,7 +22,7 @@ const Vault = ({navigation}) => {
          placeholder='Search Passwords here..' />
       </View>
     </View>
-    <View style={{flex:5}}>
+    <View style={{flex:5, margin:8}}>
       <ScrollView>
         {
           accounts.map((account, index)=>(  <PasswordCard key={index} {...account} />))
@@ -34,7 +34,7 @@ const Vault = ({navigation}) => {
    onPress={()=>navigation.navigate('create-vault')}
    style={{position:'absolute',
    padding:8,
-   top: 400,
+   top: 550,
    right: 10,
     backgroundColor:colors.secondary,
     borderRadius:23,

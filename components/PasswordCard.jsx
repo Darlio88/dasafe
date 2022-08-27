@@ -11,11 +11,11 @@ const PasswordCard = ({account,username,password,imageUrl}) => {
       marginVertical:12,
       marginHorizontal:12}} >
       <View>
-        <Image source={require('../assets/facebook.png')} style={{width:40, height:40, resizeMode:'contain'}} />
+        <Image source={{uri:imageUrl}} style={{width:40, height:40, resizeMode:'contain'}} />
       </View>
       <View>
-        <Text style={{color:colors.black,fontWeight:'bold'}}>Alexander Mary</Text>
-        <Text style={{color:colors.dark}}>alexandermary01@gmail.com</Text>
+        <Text style={{color:colors.black,fontWeight:'bold'}}>{account}</Text>
+        <Text style={{color:colors.dark}}>{username}</Text>
       </View>
       <View>
 <Feather name='chevron-right' size={24} />
